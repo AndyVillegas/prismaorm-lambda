@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "serverless offline start"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prisma": "^3.12.0",
+    "serverless-offline": "^8.7.0"
+  }
+}

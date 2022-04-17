@@ -1,0 +1,27 @@
+service: prismaORM-lambda
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  createCostumer:
+    handler: handler.createCostumer
+    events:
+      - httpApi:
+          path: /costumers
+          method: post
+  findAllCostumers:
+    handler: handler.findAllCostumers
+    events:
+      - httpApi:
+          path: /costumers
+          method: get
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    host: '0.0.0.0'
